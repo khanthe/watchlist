@@ -16,8 +16,8 @@ The watchlist includes:
 **Auth (/auth/...)**
 - /signup (post) - Allows users to register
 - /login (post) - User log-in to manage watch list or post suggestions, depending on role
-- /password (put) - allows users to change password
-- /logout (post) - deletes a user token and logs them out
+- /password (put) - Allows users to change password
+- /logout (post) - Deletes a user token and logs them out
 
 
 **Watchlist (/watchlist/...)**
@@ -25,6 +25,7 @@ The watchlist includes:
 - /:id (put) - Allows admin to update movie, such as mark it watched
 - / (get) - Allows any user to view watchlist
 - /:id (get) - Allows any user to view single movie
+- /:id (delete) - Allows admin to delete movie from list
 - /search/ (get) - Allows any user to search watchlist by keyword
 
 
@@ -32,6 +33,7 @@ The watchlist includes:
 - / (post) - Allows any user to add a movie suggestion
 - /:id (put) - Allows admin to mark as watched
 - / (get) - Allows any user to view suggestions list
+- /:id (delete) - Allows admin to delete movie from suggestions
 
 
 ### DAOs
@@ -65,10 +67,27 @@ The watchlist includes:
 ### Models
 - user - email (required, unique), hashed password (required)
 - token - userId (required), token (required, unique)
-- watchlist - title (required), description (required), genre, year (required), runtime, IMDB rating, watched (creates unique movies with title and year [ watchlistSchema.index({ title: 1, year: 1 }, { unique: true }); ]
-- suggestion - title (required), description (required), genre, year (required), runtime, IMDB rating, watched (creates unique movies with title and year [ watchlistSchema.index({ title: 1, year: 1 }, { unique: true }); ]
+- watchlist - title (required), description (required), genre, year (required), runtime, IMDB rating, watched true/false (creates unique movies with title and year [ watchlistSchema.index({ title: 1, year: 1 }, { unique: true }); ]
+- suggestion - title (required), description (required), genre, year (required), runtime, IMDB rating, watched true/false (creates unique movies with title and year [ watchlistSchema.index({ title: 1, year: 1 }, { unique: true }); ]
 
 ## How requirements will be met
 
+- Authentication required as user to view list and make suggestions
+- Authorization as admin required to manage list (create, mark watched, remove, etc.)
+- 2 sets of crud routes for watchlist and suggestions, both include creating documents (post), retrieving documents (get), updating documents (put), and deleting documents (delete) -- see above for specifics
+- All routes tested using jest tests
+- Demoed to class using a saved Postman collection
 
 ## Timeline
+
+- Week 6: Project proposal, timeline, and technical setup drafted
+- Week 7: Authenticat/Authorize and main watchlist create and read
+  - Set up routes, DAOs and models for user management
+  - Set up routes, DAOs and models for watchlist create and reading
+- Week 8: Watchlist update, delete and Suggestions
+  - Set up routes and DAOs for watchlist updates, deletes
+  - Set up routes, DAOs, and models for suggestions list
+- Week 9: Tests and deploys
+  - Create jest tests for all routes and ensure complete coverage
+  - Deploy project using Railway and Mongo Atlas
+- Week 10: Rehearse and present
