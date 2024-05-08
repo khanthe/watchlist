@@ -34,6 +34,7 @@ The watchlist includes:
 - /:id (put) - Allows admin to mark as watched
 - / (get) - Allows any user to view suggestions list
 - /:id (delete) - Allows admin to delete movie from suggestions
+- /accept/:id (post) - Allows admin to accept suggestion, adding it to the watchlist and removing it from the suggestions
 
 
 ### DAOs
@@ -55,13 +56,16 @@ The watchlist includes:
 - udpateMovie - updates existing movie object in watchlist collection
 - getAll - retrieves all movies from watchlist
 - getById - gets a specific movie document from the watchlist
-- search - Finds all movies that match keyword in title, description, or genre
+- search - finds all movies that match keyword in title, description, or genre
+- deleteMovie - finds a specific movie and deletes it
 
 
 **Suggestion DAOs**
 - createSuggestion - adds a document to the suggestions collection
 - updateSuggestion - updates a specific document in the suggestions collection
 - getAll - retrieves all suggested movies from collection
+- deleteSuggestion - finds a specific suggestion and deletes it
+- acceptSuggestion - takes a suggestion, adds it to the watchlist, then deletes it from suggestions
 
 
 ### Models
