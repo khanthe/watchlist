@@ -81,7 +81,7 @@ The watchlist includes:
 ## Timeline
 
 - Week 6: Project proposal, timeline, and technical setup drafted
-- Week 7: Authenticat/Authorize and main watchlist create and read
+- Week 7: Authenticate/Authorize and main watchlist create / read
   - Set up routes, DAOs and models for user management
   - Set up routes, DAOs and models for watchlist create and reading
 - Week 8: Watchlist update, delete and Suggestions
