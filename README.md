@@ -31,7 +31,7 @@ The watchlist includes:
 
 **Suggestions (/suggest/...)**
 - / (post) - Allows any user to add a movie suggestion
-- /:id (put) - Allows admin to mark as watched and the user that made the suggestin to udpate (you can't update other's suggestions)
+- /:id (put) - Allows admin to mark as watched and the user that made the suggestin to update (you can't update other's suggestions)
 - / (get) - Allows any user to view suggestions list
 - /:id (delete) - Allows admin to delete movie from suggestions
 - /accept/:id (post) - Allows admin to accept suggestion, adding it to the watchlist and removing it from the suggestions
