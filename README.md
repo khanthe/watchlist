@@ -1,3 +1,20 @@
+# Update
+
+## Complete
+* DAOs
+* Routes
+* Middleware
+  * Authentication
+  * Authorization
+* Models
+* Unit tests
+* Documentation
+
+## Still to do
+* Deployment 
+* Postman collection
+
+
 # Reel Roadmap: A movie watchlist
 A personal movie watchlist API using express.js and MongoDB that allows you to track what movies you want to watch, search for movies that fit your mood using keywords, and collaborate with friends and family.
 
