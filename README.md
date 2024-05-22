@@ -31,7 +31,7 @@ The watchlist includes:
 
 **Suggestions (/suggest/...)**
 - / (post) - Allows any user to add a movie suggestion
-- /:id (put) - Allows admin to mark as watched and the user that made the suggestin to update (you can't update other's suggestions)
+- /:id (put) - Allows admin to mark as watched
 - / (get) - Allows any user to view suggestions list
 - /:id (delete) - Allows admin to delete movie from suggestions
 - /accept/:id (post) - Allows admin to accept suggestion, adding it to the watchlist and removing it from the suggestions
@@ -91,7 +91,6 @@ The watchlist includes:
 - Week 8: Watchlist update, delete and Suggestions
   - Set up routes and DAOs for watchlist updates, deletes
   - Set up routes, DAOs, and models for suggestions list
-  - Set up search functionality for watchlist
 - Week 9: Tests and deploys
   - Create jest tests for all routes and ensure complete coverage
   - Deploy project using Railway and Mongo Atlas
