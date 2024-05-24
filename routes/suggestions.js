@@ -137,6 +137,7 @@ router.delete("/:id", isLoggedIn, isAuthorized, async (req, res, next) => {
         return res.status(400).json({ error: "Invalid ObjectId" });
       } else {
         const success = await suggestionDAO.deleteById(entryId);
+        console.log('deleting')
         res.sendStatus(success ? 200 : 400);
       }
   } catch(e) {
@@ -165,15 +166,15 @@ router.post("/accept/:id", isLoggedIn, isAuthorized, async (req, res, next) => {
         const watchlistEntry = await watchlistDAO.createEntry(suggestion);
         if (watchlistEntry) {
           await suggestionDAO.deleteById(entryId);
-          res.send(200).json(watchlistEntry); 
-        } else {
-
+          res.sendStatus(200); 
         }
         
     } catch(e) {
-        res.status(500).send(e.message);
+      console.log('error', e);
+        res.sendStatus(500);
     }    
   } else {
+    console.log('not found')
     res.status(404).send('Suggestion not found');
   }
 
