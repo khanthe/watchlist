@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716347521713" clover="3.2.0">
-  <project timestamp="1716347521714" name="All files">
+<coverage generated="1717448103700" clover="3.2.0">
+  <project timestamp="1717448103700" name="All files">
     <metrics statements="339" coveredstatements="288" conditionals="84" coveredconditionals="64" methods="43" coveredmethods="40" elements="466" coveredelements="392" complexity="0" loc="339" ncloc="339" packages="5" files="16" classes="16"/>
     <package name="watchlist">
       <metrics statements="30" coveredstatements="26" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="6"/>
@@ -337,9 +337,9 @@
         <line num="166" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="167" count="0" type="stmt"/>
         <line num="168" count="0" type="stmt"/>
-        <line num="174" count="0" type="stmt"/>
-        <line num="177" count="0" type="stmt"/>
-        <line num="183" count="3" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="175" count="0" type="stmt"/>
+        <line num="181" count="3" type="stmt"/>
       </file>
       <file name="watchlist.js" path="/Users/nickrohde/projects/JSCert/JS330/Final/watchlist/routes/watchlist.js">
         <metrics statements="59" coveredstatements="49" conditionals="23" coveredconditionals="17" methods="6" coveredmethods="6"/>
