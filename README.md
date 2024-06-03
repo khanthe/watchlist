@@ -1,3 +1,31 @@
+# Self Evaluation
+
+## Approach and results
+I used Express.js and Mongoose to create an APi that had multiple sets of functionality for 2 distinct user cases: a watchlist owner and a contributing friend or family member.  The main watchlist is only managed by the authenticated and authorized owner, and is for their personal use. It is a list of all movies they want to watch. A second similar set of functionality allows authenticated users to create entries in a second set of movie suggestions. The list owner can accept these suggestions and incorporate them into their primary watchlist.
+
+The app uses 4 collections:
+- Users that are registered (including the owner)
+- Tokens for current authenticated sessions
+- Watchlist for the main list
+- Suggestions for the user suggestions
+
+All routes are tested and function well together. Only admins can accomplish tasks that are intended for admins.
+
+## What I learned
+This project had an "eureka" moment for understanding how express routes are created and leveraged, and how the large set of files work together. Building this from scratch really solidified my understanding of how these technologies work.
+
+## What I would do differently and improve upon
+I would love to see this project built out with a front end, and plan to explore that in the future. The API works, but it doesn't function as a full tool without a front end user interface.
+
+Unit tests for suggestions proved more difficult as there was added complexity in multiple users being able to add documents to the collection, and an admin that had total permissions over the whole tool. I would like to re-write the unit tests for suggestions from scratch with a more cohesive approach.
+
+## What worked well and what didn't
+The concept worked well, and fills a legitimate need that I, and probably others, have. I have several lists of movies saved in various places digitally, and frequently have movies suggested to me that I'm not sure I want to watch but want to evaluate later, and know who suggested. I just can't keep it all in my head! So the concept has great value.
+
+What didn't work well was the details that would be needed to make an evaluation where a lot. Not all of the details were required, but usually would be necessary. For example, descriptions are a bit of writing and a lot to ask somebody to write, so they are not required, but without them a suggestion is only partial information.
+
+And again, without a UI this API is not complete. In it's current state it is not a tool that can be used.
+
 # Reel Roadmap: A movie watchlist
 A personal movie watchlist API using express.js and MongoDB that allows you to track what movies you want to watch, search for movies that fit your mood using keywords, and collaborate with friends and family.
 
